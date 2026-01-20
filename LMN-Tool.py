@@ -16,12 +16,7 @@ MODS_DIR = BASE_DIR.parent / "Mods"
 BALATRO_APPID = "2379780"
 
 PROTECTED_MODS = {"lovely", "Steamodded", "smods"}
-UPDATE_EXCLUDE = {"PokermonPlus"}
-
-LAUNCH_METHOD = "steam"  # steam | mac_lovely
-
-# macOS Lovely launcher (adjust if needed)
-MAC_LOVELY_SCRIPT = Path.home() / "Library/Application Support/Steam/steamapps/common/Balatro/run_lovely_macos.sh"
+UPDATE_EXCLUDE = {}
 
 # ==========================================
 
