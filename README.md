@@ -5,7 +5,7 @@ Easily update and toggle Balatro mods, save/load mod profiles, and launch straig
 ---
 ## Requirements
 - python
-- git (for updating mods via the manager)
+- git (for browsing, installing, and updating mods)
 
 
 ## Features
