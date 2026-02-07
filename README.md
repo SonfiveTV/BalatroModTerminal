@@ -21,7 +21,7 @@ Easily update and toggle Balatro mods, save/load mod profiles, and launch straig
 
 **(Option 1) Clone this repo into your Mod's parent folder**
 ```bash
-git clone https://github.com/SonfiveTV/LMN-Tool.git
+git clone https://github.com/SonfiveTV/BalatroModTerminal.git
 ```
 
 **(Option 2) Download and extract the latest Release into your Mod's parent folder**
