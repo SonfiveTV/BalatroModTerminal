@@ -115,15 +115,17 @@ def ensure_mod_index():
 
 
 def browse_mods():
-    
-
     # Ensure mod index repo is cloned/updated
     MOD_INDEX_DIR = BASE_DIR / ".mod_index"
     if MOD_INDEX_DIR.exists():
-        # update repo
-        subprocess.run(["git", "pull"], cwd=MOD_INDEX_DIR)
+        # update repo quietly
+        subprocess.run(["git", "pull"], cwd=MOD_INDEX_DIR, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     else:
-        subprocess.run(["git", "clone", "https://github.com/skyline69/balatro-mod-index.git", str(MOD_INDEX_DIR)])
+        subprocess.run(
+            ["git", "clone", "https://github.com/skyline69/balatro-mod-index.git", str(MOD_INDEX_DIR)],
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL
+        )
 
     clear()
     print("Browse Mods")
@@ -174,6 +176,9 @@ def browse_mods():
         input("\nPress Enter to return...")
         return
 
+    # Sort results alphabetically by title
+    results.sort(key=lambda m: m["title"].lower())
+
     results = results[:20]  # cap results
 
     print("\nResults:")
@@ -214,6 +219,7 @@ def browse_mods():
         )
 
     input("\nDone. Press Enter to return...")
+
 
 
 
